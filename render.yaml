@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: your-django-app
+    name: django-main-app
     runtime: python
     buildCommand: "./build.sh"
     startCommand: "gunicorn myproject.wsgi:application --bind 0.0.0.0:10000"
@@ -11,5 +11,5 @@ services:
         value: 4
 
   - type: redis
-    name: your-django-redis
+    name: django-redis-cache
     plan: free
