@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: my-django-project
+    name: my-django-app
     runtime: python
     buildCommand: "./build.sh"
     startCommand: "gunicorn myproject.wsgi:application --bind 0.0.0.0:10000"
@@ -9,6 +9,8 @@ services:
         generateValue: true
       - key: WEB_CONCURRENCY
         value: 4
+      - key: DISABLE_COLLECTSTATIC
+        value: 1
 
   - type: redis
     name: my-redis-cache
