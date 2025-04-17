@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: your-django-app
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn myproject.wsgi:application --bind 0.0.0.0:10000"
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
+
+  - type: redis
+    name: your-django-redis
+    plan: free
