@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-+6+duw=wt6xw&*rs33gwco245p3ytno-yqjvv5f3m2#rp0uwlo
 DEBUG = False
 
 # Add Render's URL (you'll get this later)
-ALLOWED_HOSTS = ['authandadverts.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['authandadverts.onrender.com']
 
 # Database (Render will provide PostgreSQL)
 
